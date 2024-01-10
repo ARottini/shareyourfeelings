@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Share your feelings</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	 <script src="https://kit.fontawesome.com/5f49ce57d6.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <section class="section has-text-centered">
+    <div class="container">
+      <h1 class="title is-size-1">
+        Share your feelings
+      </h1>
+      <p class="subtitle"> A digital pillow. <strong>Go ahead and yell.</strong> </p>
+    </div>
+	  <!-- Start Content -->
+<div class="block">
+   <form autocomplete="off">
+      <input class="input is-large is-rounded has-text-centered mt-6 has-background-primary-light" type = "text" id = "input1" placeholder="Let it out" />
+      <br> <br>
+   </form>
+	<button class="button is-large mb-1 has-background-primary-light" type = "submit" onclick = "yellText()"> Yell it if you want</button>
+	<span class="icon is-large"> <i class="fa-solid fa-arrow-right"></i></span>
+   <button class="button is-large mb-6 has-background-primary-light" type = "submit" onclick = "clearText()"> Send to the digital abyss</button>
+   
+	<script>
+      let output = document.getElementById('output');
+      function clearText(event) {
+         let input1 = document.getElementById('input1');
+         input1.value = "";
+      }	  
+		
+	  function yellText(textID) {
+		  let input1 = document.getElementById('input1');
+		  input1.value = input1.value.toLocaleUpperCase() + "!";
+		  
+	  }
+		
+   </script>  
+	  
+<div class="notification">
+  <strong>Nothing you input is stored.</strong>  <a href="https://github.com/ARottini/shareyourfeelings" target="_blank">
+	<span class="icon is-small"> <i class="fa-brands fa-github"></i></span></a>
+</div>	
+	  
+	  </div>  
+  </section>
+  </body>
+</html>
